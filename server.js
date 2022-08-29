@@ -14,6 +14,11 @@ app.get("/greeting/:firstname/:lastname", (req, res) => {
   res.send("Greetings " + req.params.firstname + " " + req.params.lastname)
 })
 
+app.get("/tip/:total/:tipPrecentage", (req, res) => {
+  console.log(req.params)
+  res.send("Your tip " + (req.params.total) * (req.params.tipPrecentage /100))
+});
+
 // tell the app to listen on port...
 app.listen(port, function(){
     console.log("listening")
