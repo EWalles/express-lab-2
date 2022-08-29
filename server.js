@@ -18,6 +18,7 @@ app.get("/tip/:total/:tipPrecentage", (req, res) => {
   console.log(req.params)
   res.send("Your tip " + (req.params.total) * (req.params.tipPrecentage /100))
 });
+
 let ball = [
   "It is certain", "It is decidedly so", 
   "Without a doubt", "Yes definitely",
