@@ -9,9 +9,9 @@ const port = 3000;
 
 // define routes req=request res=response
 
-app.get("/hello/:firstname/:lastname", (req, res) => {
+app.get("/greeting/:firstname/:lastname", (req, res) => {
   console.log(req.params)
-  res.send("hello " + req.params.firstname + " " + req.params.lastname)
+  res.send("Greetings " + req.params.firstname + " " + req.params.lastname)
 })
 
 // tell the app to listen on port...
