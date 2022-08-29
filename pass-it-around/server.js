@@ -9,11 +9,11 @@ const port = 3000;
 
 // define routes req=request res=response
 
-app.get("/", (req, res) => {
-  console.log("listening")
-  res.send("99 Bottles of beer on the wall")
-})
-app.get("/:numberOfBottles?", function( req, res ){
+app.get("/", function(req,res){
+    res.redirect('/99');
+  });
+  
+  app.get("/:numberOfBottles?", function( req, res ){
     var numberOfBottles = req.params.numberOfBottles || 99;
     var next = numberOfBottles - 1;
     if (numberOfBottles > 1){
