@@ -31,10 +31,11 @@ let ball = [
   "My reply is no", "My sources say no",
   "Outlook not so good", "Very doubtful"]
 
-  let answers = ball[Math.floor(math.random()*ball.length)];
+  let answers = ball[Math.floor(Math.random()*ball.length)];
 
 app.get("/magic/:answer", (req, res) => 
 {res.send(<h1>${answer}</h1>)});
+
 
 
 // tell the app to listen on port...
