@@ -34,7 +34,7 @@ let ball = [
   let answers = ball[Math.floor(Math.random()*ball.length)];
 
 app.get("/magic/:answer", (req, res) => 
-{res.send(<h1>${`answers`}</h1>)});
+{res.send(`<h1>${answers}</h1>`)});
 
 
 
